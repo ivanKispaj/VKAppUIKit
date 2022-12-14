@@ -62,7 +62,8 @@ class FriendsTableViewController: UITableViewController, UISearchBarDelegate, Fr
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Operation....
-        let loadData = OperationLoadFriendsFromRealm(friendId: NetworkSessionData.shared.testUser)
+        guard let ID = NetworkSessionData.shared.userId else { return }
+        let loadData = OperationLoadFriendsFromRealm(friendId: ID)
         let getFriendsViewData = OperationFriendViewData(setView: self)
         getFriendsViewData.addDependency(loadData)
         queue.addOperation(loadData)

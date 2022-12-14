@@ -21,7 +21,7 @@ extension DetailUserTableViewController {
                 }
             }
         } else {
-            DispatchQueue.global(qos: .userInteractive).async {
+            DispatchQueue.global(qos: .default).async {
                 internetConnection.loadFriends(for: String(self.friendsSelected.id))
                 
             }

@@ -32,7 +32,7 @@ final class VideoLoadService {
         
         var player: AVPlayer?
         
-        if let video = players[data.firstFrame.url] {
+        if let frame = data.firstFrame, let video = players[frame.url] {
             player = video
         } else {
             getVideoPlayer(atIndexPath: indexPath, byData: data)

@@ -81,7 +81,7 @@ final class PhotoCacheService {
     private func loadPhoto(atIndexpath indexPath: IndexPath, byUrl url: String) {
         guard let uri = URL(string: url) else { return }
         
-        DispatchQueue.global(qos: .userInteractive).async {
+        DispatchQueue.global(qos: .userInitiated).async {
             guard let data = try? Data(contentsOf: uri),
                   let image = UIImage(data: data) else { return }
             DispatchQueue.main.async {

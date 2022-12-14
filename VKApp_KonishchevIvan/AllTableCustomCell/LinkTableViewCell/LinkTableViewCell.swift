@@ -32,7 +32,7 @@ class LinkTableViewCell: UITableViewCell, DequeuableProtocol {
         self.linkDate.text = data.date.unixTimeConvertion()
         self.linkLink.text = data.linkUrl
         self.linkLikeCount.text = String(data.likes.count)
-        self.linkUserLogo.image = UIImage(data: friend.photo)
+        self.linkUserLogo.loadImageFromUrlString(friend.photo)
         self.linkUserName.text = friend.userName
         self.linkText.text = data.titleNews
         self.linkSeenCount.text = String(data.views?.count ?? 0)

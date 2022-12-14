@@ -15,6 +15,7 @@ import UIKit
 
 class CustomCodeSearchBar: UISearchBar {
     
+    var issetImage: Bool = false
     // Констрейнты для передвижения лупы
     var searchLeadingToCenterConstaint = [NSLayoutConstraint]()
     var searchLeadingToLeftconstraint = [NSLayoutConstraint]()
@@ -47,10 +48,12 @@ class CustomCodeSearchBar: UISearchBar {
     // Анимация при нажатии на searchBar
     func tapInSearchBar() {
         UIView.animate(withDuration: 0.5) {
+            self.layoutIfNeeded()
             NSLayoutConstraint.deactivate(self.buttonWidthHideConstrinte)
             self.buttonSearchBar.frame.size.width = 0
             NSLayoutConstraint.activate(self.buttonWidthConstant)
-            self.layoutIfNeeded()
+
+
         }
         UIView.animate(withDuration: 0.4,
                        delay: 0.0,
@@ -79,12 +82,13 @@ class CustomCodeSearchBar: UISearchBar {
                        usingSpringWithDamping: 0.2,
                        initialSpringVelocity: 0.3,
                        options: .curveLinear) {
+            self.layoutIfNeeded()
             self.placeholder = ""
             self.text = ""
             self.setPositionAdjustment(UIOffset(horizontal: 0, vertical: 0), for: UISearchBar.Icon.search)
             NSLayoutConstraint.deactivate(self.searchLeadingToLeftconstraint)
             NSLayoutConstraint.activate(self.searchLeadingToCenterConstaint)
-            self.layoutIfNeeded()
+            
             
         }
         self.resignFirstResponder()
@@ -122,30 +126,33 @@ extension CustomCodeSearchBar {
     }
     
     func addSearchImageToSearchBar() {
-        self.searchImage.image = UIImage(systemName: "magnifyingglass")
-        self.searchImage.tintColor = UIColor.black
-        self.addSubview(self.searchImage)
-        self.searchImage.translatesAutoresizingMaskIntoConstraints = false
-        let centerSearchBar = (self.frame.width / 2)
-        
-        NSLayoutConstraint.activate([
+        if !issetImage {
+            issetImage.toggle()
+            self.searchImage.image = UIImage(systemName: "magnifyingglass")
+            self.searchImage.tintColor = UIColor.black
+            self.addSubview(self.searchImage)
+            self.searchImage.translatesAutoresizingMaskIntoConstraints = false
+            let centerSearchBar = (self.frame.width / 2)
             
-            self.searchImage.widthAnchor.constraint(equalTo: self.searchImage.heightAnchor, multiplier: 1.0 / 1.0),
-            self.topAnchor.constraint(equalTo: self.searchImage.topAnchor, constant: -18.5),
-            self.bottomAnchor.constraint(equalTo: self.searchImage.bottomAnchor, constant: 18.5)
-        ])
-        let heightConstraint = self.searchImage.heightAnchor.constraint(equalToConstant: 23)
-        heightConstraint.priority = UILayoutPriority(rawValue: 999)
-        heightConstraint.isActive = true
-        self.searchLeadingToCenterConstaint = [
-            self.searchImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: centerSearchBar)
-        ]
-        self.searchLeadingToLeftconstraint = [
-            self.searchImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.frame.minX + 15)
-        ]
-        
-        NSLayoutConstraint.activate(self.searchLeadingToCenterConstaint)
+            NSLayoutConstraint.activate([
+                
+                self.searchImage.widthAnchor.constraint(equalTo: self.searchImage.heightAnchor, multiplier: 1.0 / 1.0),
+                self.searchImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 18),
+                self.bottomAnchor.constraint(equalTo: self.searchImage.bottomAnchor, constant: 18.5)
+            ])
+            
+            let heightConstraint = self.searchImage.heightAnchor.constraint(equalToConstant: 23)
+            heightConstraint.priority = UILayoutPriority(rawValue: 1000)
+            heightConstraint.isActive = true
+            self.searchLeadingToCenterConstaint = [
+                self.searchImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: centerSearchBar)
+            ]
+            self.searchLeadingToLeftconstraint = [
+                self.searchImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.frame.minX + 15)
+            ]
+            
+            NSLayoutConstraint.activate(self.searchLeadingToCenterConstaint)
+        }
     }
-    
 }
 

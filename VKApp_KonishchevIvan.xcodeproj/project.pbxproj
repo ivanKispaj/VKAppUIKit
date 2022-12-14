@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -80,7 +80,6 @@
 		63E897832843AE3400BAACE1 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E897812843AE3400BAACE1 /* NewsCollectionViewCell.swift */; };
 		63E897842843AE3400BAACE1 /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E897822843AE3400BAACE1 /* NewsCollectionViewCell.xib */; };
 		63E897872843B1F400BAACE1 /* extensionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E897862843B1F400BAACE1 /* extensionCollectionView.swift */; };
-		63F3E79928BD025E0034D6ED /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3E79828BD025E0034D6ED /* Coffee.swift */; };
 		63F3E79B28BD1FDD0034D6ED /* InternetConnectionProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3E79A28BD1FDD0034D6ED /* InternetConnectionProxy.swift */; };
 		8003DA2727D5E1E00048B191 /* ExtendTableUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003DA2527D5E1E00048B191 /* ExtendTableUserCell.swift */; };
 		8003DA2827D5E1E00048B191 /* ExtendTableUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8003DA2627D5E1E00048B191 /* ExtendTableUserCell.xib */; };
@@ -215,7 +214,6 @@
 		63E897812843AE3400BAACE1 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		63E897822843AE3400BAACE1 /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		63E897862843B1F400BAACE1 /* extensionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionCollectionView.swift; sourceTree = "<group>"; };
-		63F3E79828BD025E0034D6ED /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		63F3E79A28BD1FDD0034D6ED /* InternetConnectionProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionProxy.swift; sourceTree = "<group>"; };
 		8003DA2527D5E1E00048B191 /* ExtendTableUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendTableUserCell.swift; sourceTree = "<group>"; };
 		8003DA2627D5E1E00048B191 /* ExtendTableUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtendTableUserCell.xib; sourceTree = "<group>"; };
@@ -882,14 +880,6 @@
 			path = ExtensionCollectionView;
 			sourceTree = "<group>";
 		};
-		63F3E79728BD02430034D6ED /* HomeWorkLesson6Coffee */ = {
-			isa = PBXGroup;
-			children = (
-				63F3E79828BD025E0034D6ED /* Coffee.swift */,
-			);
-			path = HomeWorkLesson6Coffee;
-			sourceTree = "<group>";
-		};
 		7CFE21C9457B13484B5FD2C5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -960,7 +950,6 @@
 		804154ED27B62FE900160418 /* VKApp_KonishchevIvan */ = {
 			isa = PBXGroup;
 			children = (
-				63F3E79728BD02430034D6ED /* HomeWorkLesson6Coffee */,
 				638E99C92812694C00367F44 /* CustomSearshbarControllers */,
 				638E99C82812693600367F44 /* CustomNavigationControllers */,
 				638E99C72812692600367F44 /* CustomTabBarControllers */,
@@ -1196,7 +1185,7 @@
 				};
 			};
 			buildConfigurationList = 804154E627B62FE900160418 /* Build configuration list for PBXProject "VKApp_KonishchevIvan" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1269,7 +1258,6 @@
 				638E99AB28125CF600367F44 /* DelegateLikeExtension.swift in Sources */,
 				808E9D9A27BE94C00089E4A4 /* FriendsTableViewController.swift in Sources */,
 				80D1315C27FEA85E009EA04D /* CustomNavigationController.swift in Sources */,
-				63F3E79928BD025E0034D6ED /* Coffee.swift in Sources */,
 				6343D34628AB471800A6A52D /* NewsSinglePhotoViewModel.swift in Sources */,
 				638E99C5281267EC00367F44 /* CustomSingleCollectionLayout.swift in Sources */,
 				80C19ACD27D76C6E009C34CB /* CouruselTableViewCell.swift in Sources */,
@@ -1440,7 +1428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1495,7 +1483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1521,7 +1509,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1551,7 +1539,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

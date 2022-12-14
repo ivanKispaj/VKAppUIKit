@@ -17,12 +17,12 @@ class SimpleTableCell: UITableViewCell,DequeuableProtocol {
     
     
     func setCellData(toFriendsScene data: Friend) {
-        if let dataPhoto = data.photo {
-            self.imageCellAvatar.image = UIImage(data: dataPhoto)
-        } else {
-            self.imageCellAvatar.image = UIImage(named: "noFoto")
-        }
-        
+//        if let dataPhoto = data.photo {
+//            self.imageCellAvatar.image = UIImage(data: dataPhoto)
+//        } else {
+//            self.imageCellAvatar.image = UIImage(named: "noFoto")
+//        }
+        self.imageCellAvatar.loadImageFromUrlString(data.photo)
         self.labelCityCellXib.text = data.city
         self.lableCellXib.text = data.userName
         self.profileStatus.text = ""
@@ -39,8 +39,7 @@ class SimpleTableCell: UITableViewCell,DequeuableProtocol {
     }
     
     func setCellData(toGroupScene data: ItemsGroup) {
-    
-        self.imageCellAvatar.image = UIImage(data: data.photoGroup)
+        self.imageCellAvatar.loadImageFromUrlString(data.photoGroup)
         self.lableCellXib.text = data.groupName
         self.labelCityCellXib.text = data.activity
         self.profileStatus.text = ""

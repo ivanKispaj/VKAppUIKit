@@ -31,8 +31,7 @@ extension VKLoginViewController: WKNavigationDelegate {
         if let token = params["access_token"], let id = params["user_id"] {
             NetworkSessionData.shared.token = token
             NetworkSessionData.shared.userId = Int(id)
-            print(token)
-            print(id)
+
             if let data = self.realm.readData(DeviceId.self)?.first {
                 NetworkSessionData.shared.lastSeen = String(data.lastSeen)
             }

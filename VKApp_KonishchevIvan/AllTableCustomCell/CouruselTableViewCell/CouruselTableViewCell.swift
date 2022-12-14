@@ -40,7 +40,7 @@ class CouruselTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          let cell: CouruselCollectionViewCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
-         cell.imageCouruselCell.image = UIImage(data: self.collectionData![indexPath.row].photo)
+         cell.imageCouruselCell.loadImageFromUrlString(self.collectionData![indexPath.row].photo)
          cell.lableForDetailsCorusel.text = self.collectionData![indexPath.row].userName
         return cell
     }

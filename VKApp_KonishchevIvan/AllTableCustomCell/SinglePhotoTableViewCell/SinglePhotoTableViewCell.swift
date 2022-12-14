@@ -62,13 +62,14 @@ class SinglePhotoTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
 
 
     func setCellData(from data: DetailsSectionData, to user: Friend) {
-        if user.photo == nil {
-            self.singleAvatarHeader.image = UIImage(named: "noFoto")
-
-        } else {
-            self.singleAvatarHeader.image = UIImage(data: user.photo)
-
-        }
+//        if user.photo == nil {
+//            self.singleAvatarHeader.image = UIImage(named: "noFoto")
+//
+//        } else {
+//            self.singleAvatarHeader.image = UIImage(data: user.photo)
+//
+//        }
+            self.singleAvatarHeader.loadImageFromUrlString(user.photo) 
         self.singleLableUserName.text = user.userName
         if let seen = data.views {
             self.singlePhotoSeenCount.text = String(seen.count)

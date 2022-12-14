@@ -14,18 +14,19 @@ extension FriendsTableViewController {
     //   После теста заменить id пользователя на id NetworkSessionData.shared.userId!
     
     func loadMyFriends() {
+        guard let ID = NetworkSessionData.shared.userId else { return }
         let internetConnection = InternetConnectionProxy(internetConnection:  InternetConnections(host: "api.vk.com", path: UrlPath.getFriends))
-        if let result = self.realmService.readData(FriendsResponse.self)?.where({ $0.id == NetworkSessionData.shared.testUser }).first {
+        if let result = self.realmService.readData(FriendsResponse.self)?.where({ $0.id == ID}).first {
             self.parseData(from: result)
             if result.countFriends != result.items.count {
             
                 DispatchQueue.global(qos: .default).async {
-                    internetConnection.loadFriends(for: String(NetworkSessionData.shared.testUser), count: "")
+                    internetConnection.loadFriends(for: String(ID), count: "")
                 }
             }
         } else {
-            DispatchQueue.global(qos: .userInteractive).async {
-                internetConnection.loadFriends(for: String(NetworkSessionData.shared.testUser))
+            DispatchQueue.global(qos: .default).async {
+                internetConnection.loadFriends(for: String(ID))
                 
             }
         }
@@ -38,7 +39,8 @@ extension FriendsTableViewController {
                 case .initial(_):
                     print("FriendsController Signed ")
                 case let .update(results, _, _, _):
-                    if let response = results.where({ $0.id == NetworkSessionData.shared.testUser }).first {
+                    guard let ID = NetworkSessionData.shared.userId else { return }
+                    if let response = results.where({ $0.id == ID }).first {
                         if response.countFriends != self?.friendsArray.count {
                             self?.parseData(from: response)
                         }

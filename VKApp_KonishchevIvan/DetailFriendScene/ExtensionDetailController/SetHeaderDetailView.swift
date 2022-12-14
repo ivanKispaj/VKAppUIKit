@@ -15,12 +15,13 @@ extension DetailUserTableViewController {
         DispatchQueue.main.async {
             self.detailUserNameLable.text = self.friendsSelected.userName
             self.detailUserInfoLable.text = self.friendsSelected.status
+            self.detailAvatarHeader.loadImageFromUrlString(self.friendsSelected.photo)
         }
-        if self.friendsSelected.photo != nil {
-            self.detailAvatarHeader.image = UIImage(data: self.friendsSelected.photo)
-        } else {
-            self.detailAvatarHeader.image = UIImage(named: "noFoto")
-        }
+//        if self.friendsSelected.photo != nil {
+//            self.detailAvatarHeader.image = UIImage(data: self.friendsSelected.photo)
+//        } else {
+//            self.detailAvatarHeader.image = UIImage(named: "noFoto")
+//        }
         let time = self.friendsSelected.lastSeenDate.unixTimeConvertion()
         if self.friendsSelected.online {
             self.detailUserAccountLable.textColor = UIColor.red

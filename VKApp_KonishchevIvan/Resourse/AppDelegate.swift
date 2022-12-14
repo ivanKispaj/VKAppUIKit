@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
         }
  //MARK: - Использую при тестировании ( удаляю базу данных realm!!! ) временно нужный закомаентированный код!
-//        let url = Realm.Configuration.defaultConfiguration.fileURL!
-//        remove(realmURL: url)
+        let url = Realm.Configuration.defaultConfiguration.fileURL!
+        remove(realmURL: url)
         return true
     }
 

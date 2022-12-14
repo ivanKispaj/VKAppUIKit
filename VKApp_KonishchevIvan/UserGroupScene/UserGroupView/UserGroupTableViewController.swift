@@ -28,7 +28,7 @@ class UserGroupTableViewController: UITableViewController, UISearchBarDelegate{
         super.viewDidAppear(animated)
 // Promises!!!
         service.getUrlUserGroup()
-            .then(on: .global(qos: .userInteractive), (service.getDataUserGroup(_:)))
+            .then(on: .global(qos: .userInitiated), (service.getDataUserGroup(_:)))
             .then(service.getParseData(_:))
             .done(on: .main) {[weak self] result in
                 self?.dataGroups = result
