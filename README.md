@@ -7,3 +7,12 @@
 
 <h3> Preview </h3>
 
+![preview](https://user-images.githubusercontent.com/91827767/207524262-b5768b24-ae5f-486d-9108-33bbb19ce330.gif)
+
+<ul>
+  <li> News screen, with video and text display</li>
+  <li> Friends screen, you can open each friend and view information about him.
+    There is also a built-in gallery.</li>
+  <li> The screen of the groups that the user is a member of.
+    You can unsubscribe from the group or use the new search for groups and join some other.</li>
+  </ul>
