@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="CouruselCollectionViewCell" customModule="VKApp_KonishchevIvan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMn-LJ-pOS">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="120"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcV-cH-CsY" customClass="ShadowViewRadius" customModule="VKApp_KonishchevIvan" customModuleProvider="target">
+                                <rect key="frame" x="15" y="5" width="45" height="45"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beY-kV-kcD" customClass="CircleView" customModule="VKApp_KonishchevIvan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9g1-If-ua3">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9g1-If-ua3" secondAttribute="height" multiplier="1:1" id="Xc4-VL-fGb"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="9g1-If-ua3" secondAttribute="trailing" id="5RR-uN-AaI"/>
+                                            <constraint firstAttribute="bottom" secondItem="9g1-If-ua3" secondAttribute="bottom" id="DeA-Gy-Xmh"/>
+                                            <constraint firstItem="9g1-If-ua3" firstAttribute="top" secondItem="beY-kV-kcD" secondAttribute="top" id="a93-9x-NdZ"/>
+                                            <constraint firstItem="9g1-If-ua3" firstAttribute="leading" secondItem="beY-kV-kcD" secondAttribute="leading" id="vpx-wF-M1b"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="beY-kV-kcD" secondAttribute="trailing" id="B4z-5I-fgp"/>
+                                    <constraint firstItem="beY-kV-kcD" firstAttribute="leading" secondItem="LcV-cH-CsY" secondAttribute="leading" id="Ouk-n3-wNE"/>
+                                    <constraint firstAttribute="width" secondItem="LcV-cH-CsY" secondAttribute="height" multiplier="1:1" id="he3-gM-eVY"/>
+                                    <constraint firstAttribute="height" constant="45" id="hjC-9J-3R1"/>
+                                    <constraint firstItem="beY-kV-kcD" firstAttribute="top" secondItem="LcV-cH-CsY" secondAttribute="top" id="iMA-So-CYa"/>
+                                    <constraint firstAttribute="bottom" secondItem="beY-kV-kcD" secondAttribute="bottom" id="kYe-qw-5Yf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="avatarHeaightConstraint" destination="hjC-9J-3R1" id="7Pb-pA-WPu"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asfjsakhfihwakfqwbkgfbwqgk" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzL-Ny-vAo">
+                                <rect key="frame" x="2" y="94" width="71" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wzL-Ny-vAo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LcV-cH-CsY" secondAttribute="bottom" constant="2" id="1b3-Qb-Mwc"/>
+                            <constraint firstItem="wzL-Ny-vAo" firstAttribute="leading" secondItem="PMn-LJ-pOS" secondAttribute="leading" constant="2" id="2nR-9h-naP"/>
+                            <constraint firstAttribute="bottom" secondItem="wzL-Ny-vAo" secondAttribute="bottom" constant="2" id="9lR-vT-CtE"/>
+                            <constraint firstItem="wzL-Ny-vAo" firstAttribute="leading" secondItem="PMn-LJ-pOS" secondAttribute="leading" constant="2" id="Hzv-Fr-0Mo"/>
+                            <constraint firstAttribute="bottom" secondItem="wzL-Ny-vAo" secondAttribute="bottom" constant="2" id="Ldr-Gn-oSI"/>
+                            <constraint firstItem="LcV-cH-CsY" firstAttribute="top" secondItem="PMn-LJ-pOS" secondAttribute="top" constant="5" id="PzX-de-bT1"/>
+                            <constraint firstAttribute="trailing" secondItem="wzL-Ny-vAo" secondAttribute="trailing" constant="2" id="RKB-lB-UXq"/>
+                            <constraint firstAttribute="trailing" secondItem="wzL-Ny-vAo" secondAttribute="trailing" constant="2" id="RpQ-gN-0tl"/>
+                            <constraint firstAttribute="bottom" secondItem="wzL-Ny-vAo" secondAttribute="bottom" constant="2" id="Ryr-Vp-wFM"/>
+                            <constraint firstAttribute="trailing" secondItem="wzL-Ny-vAo" secondAttribute="trailing" constant="2" id="Td6-WA-kW9"/>
+                            <constraint firstItem="LcV-cH-CsY" firstAttribute="centerX" secondItem="PMn-LJ-pOS" secondAttribute="centerX" id="nY6-pz-6ZG"/>
+                            <constraint firstItem="wzL-Ny-vAo" firstAttribute="leading" secondItem="PMn-LJ-pOS" secondAttribute="leading" constant="2" id="vEN-7m-nUN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="PMn-LJ-pOS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4gj-Vl-MTT"/>
+                <constraint firstItem="PMn-LJ-pOS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JaX-1G-7m4"/>
+                <constraint firstAttribute="trailing" secondItem="PMn-LJ-pOS" secondAttribute="trailing" id="Qwm-i2-UGT"/>
+                <constraint firstAttribute="bottom" secondItem="PMn-LJ-pOS" secondAttribute="bottom" id="cnb-i2-eYS"/>
+            </constraints>
+            <size key="customSize" width="82" height="158"/>
+            <connections>
+                <outlet property="avatarCouruselView" destination="LcV-cH-CsY" id="0t9-4A-24h"/>
+                <outlet property="contentCollectionCell" destination="PMn-LJ-pOS" id="aFN-AJ-uY1"/>
+                <outlet property="imageCouruselCell" destination="9g1-If-ua3" id="3dV-zr-oQc"/>
+                <outlet property="lableForDetailsCorusel" destination="wzL-Ny-vAo" id="Wmi-Hl-Ndi"/>
+            </connections>
+            <point key="canvasLocation" x="160.1449275362319" y="86.383928571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>
