@@ -6,8 +6,8 @@
 <p align="center"> At the moment, work on the proposal has been suspended due to lack of time. There is still much to improve. At the moment, the forces are thrown at writing VK App applications on Swift UI. (It is partially written and currently divided into packages )</p>
 
 <h3> Preview </h3>
+<img src="https://serviseoil.ru/wp-content/uploads/2022/12/preview.gif" width="100" height="200"/>
 
-![preview](https://user-images.githubusercontent.com/91827767/207524262-b5768b24-ae5f-486d-9108-33bbb19ce330.gif)
 
 <ul>
   <li> News screen, with video and text display</li>
